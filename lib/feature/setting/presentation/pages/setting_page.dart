@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SettingPage extends StatelessWidget {
-  static const routeName = '/SettingPage';
 
   @override
   Widget build(BuildContext context) {

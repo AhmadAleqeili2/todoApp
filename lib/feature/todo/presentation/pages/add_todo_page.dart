@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddTodoPage extends StatefulWidget {
-  static const routeName = '/AddTodoPage';
 
   @override
   State<StatefulWidget> createState() {

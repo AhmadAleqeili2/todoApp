@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
           );
         } else if (settingState is SettingLoadSuccessState) {
           return MaterialApp(
-            title: 'DoneIt',
+            title: 'My Todo App',
             theme: lightThemeData,
             themeMode: settingState.setting.appThemeMode == AppThemeMode.dark
                 ? ThemeMode.dark

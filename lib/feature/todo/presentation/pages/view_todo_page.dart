@@ -2,7 +2,6 @@ import 'package:APP2323/feature/todo/data/models/todo_model.dart';
 import 'package:flutter/material.dart';
 
 class ViewTodoPage extends StatelessWidget {
-  static const routeName = '/ViewTodoPage';
 
   final TodoModel todoModel;
 
@@ -12,7 +11,7 @@ class ViewTodoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: key,
-      appBar: AppBar(),
+      appBar: AppBar(title:Text("My Todo App") ,),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

@@ -1,15 +1,12 @@
-import 'package:APP2323/feature/setting/presentation/pages/setting_page.dart';
+import 'package:APP2323/core/constants/routes_name.dart';
 import 'package:APP2323/feature/todo/data/models/todo_model.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
-import 'package:APP2323/feature/todo/presentation/pages/add_todo_page.dart';
-import 'package:APP2323/feature/todo/presentation/pages/view_todo_page.dart';
 import 'package:APP2323/feature/todo/presentation/widgets/todo_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TodoHomePage extends StatelessWidget {
-  static const routeName = '/TodoHomePage';
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,7 @@ class TodoHomePage extends StatelessWidget {
             IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {
-                  Navigator.pushNamed(context, SettingPage.routeName);
+                  Navigator.pushNamed(context, RouteNames.SettingPage);
                 }),
           ],
         ),
@@ -49,7 +46,7 @@ class TodoHomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(
                           context,
-                          ViewTodoPage.routeName,
+                          RouteNames.ViewTodoPage,
                           arguments: state.todoList[index] as TodoModel
                         );
                       },
@@ -77,7 +74,7 @@ class TodoHomePage extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add_circle),
           onPressed: () {
-            Navigator.pushNamed(context, AddTodoPage.routeName);
+            Navigator.pushNamed(context, RouteNames.AddTodoPage);
           },
         ),
       ),
