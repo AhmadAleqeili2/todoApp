@@ -1,3 +1,4 @@
+import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/core/constants/routes_name.dart';
 import 'package:APP2323/feature/todo/data/models/todo_model.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
@@ -30,7 +31,7 @@ class TodoHomePage extends StatelessWidget {
           builder: (BuildContext context, TodoState state) {
             if (state is TodoInitialState) {
               return Center(
-                child: Text("Initial State"),
+                child: Text(AppStrings.InitialState),
               );
             } else if (state is TodoLoadingState) {
               return Center(
@@ -62,11 +63,11 @@ class TodoHomePage extends StatelessWidget {
               );
             } else if (state is TodoLoadFailedState) {
               return Center(
-                child: Text("Error Loading"),
+                child: Text(AppStrings.errorLoading),
               );
             } else {
               return Center(
-                child: Text("Unexpected State"),
+                child: Text(AppStrings.unExpectedState),
               );
             }
           },

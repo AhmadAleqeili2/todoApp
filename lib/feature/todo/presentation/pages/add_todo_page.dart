@@ -1,3 +1,4 @@
+import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/core/presentation/some_went_wrong_page.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ class AddTodoPageState extends State<AddTodoPage> {
                 autofocus: true,
                 validator: (value) {
                   if (value?.isEmpty == true) {
-                    return 'Please enter some text';
+                    return AppStrings.taskRequired;
                   }
                   return null;
                 },

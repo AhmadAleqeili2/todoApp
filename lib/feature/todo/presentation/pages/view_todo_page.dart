@@ -1,3 +1,4 @@
+import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/feature/todo/data/models/todo_model.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,7 @@ class ViewTodoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: key,
-      appBar: AppBar(title:Text("My Todo App") ,),
+      appBar: AppBar(title:Text(AppStrings.title) ,),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

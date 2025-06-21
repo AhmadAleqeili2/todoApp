@@ -1,3 +1,4 @@
+import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/core/enums/app_theme_mode.dart';
 import 'package:APP2323/feature/setting/presentation/blocs/setting/setting_bloc.dart';
 import 'package:flutter/material.dart';
@@ -14,14 +15,14 @@ class SettingPage extends StatelessWidget {
         }
       },
       child: Scaffold(
-        appBar: AppBar(title: Text("Setting")),
+        appBar: AppBar(title: Text(AppStrings.settingPageTitle)),
         body: BlocBuilder<SettingBloc, SettingState>(
           builder: (BuildContext context, SettingState settingState) {
             if (settingState is SettingLoadSuccessState) {
               return Column(
                 children: [
                   ListTile(
-                    title: Text("Dark Mode"),
+                    title: Text(AppStrings.appDarkMode),
                     trailing: Switch(
                       value: settingState.setting.appThemeMode ==
                           AppThemeMode.dark,
