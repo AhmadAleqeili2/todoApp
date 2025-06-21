@@ -30,9 +30,3 @@ class ViewTodoPage extends StatelessWidget {
     );
   }
 }
-
-class ViewTodoPageArguments {
-  final TodoModel todoModel;
-
-  ViewTodoPageArguments({required this.todoModel});
-}

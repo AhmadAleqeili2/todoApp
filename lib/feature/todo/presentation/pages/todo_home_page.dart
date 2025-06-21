@@ -3,7 +3,9 @@ import 'package:APP2323/core/constants/routes_name.dart';
 import 'package:APP2323/feature/todo/data/models/todo_model.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
-import 'package:APP2323/feature/todo/presentation/widgets/todo_card.dart';
+import 'package:APP2323/feature/todo/presentation/widgets/todo_home/todo_card.dart';
+import 'package:APP2323/feature/todo/presentation/widgets/todo_home/app_bar.dart';
+import 'package:APP2323/feature/todo/presentation/widgets/todo_home/floating_action_buttin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,22 +13,16 @@ class TodoHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return BlocListener<TodoFormBloc, TodoFormState>(
       listener: (BuildContext context, TodoFormState todoFormState) {
+        
         if (todoFormState is TodoFormAddSuccessState) {
           context.read<TodoBloc>().add(GetTodoListEvent());
         }
       },
       child: Scaffold(
-        appBar: AppBar(
-          actions: [
-            IconButton(
-                icon: Icon(Icons.settings),
-                onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.SettingPage);
-                }),
-          ],
-        ),
+        appBar: appBar(context),
         body: BlocBuilder<TodoBloc, TodoState>(
           builder: (BuildContext context, TodoState state) {
             if (state is TodoInitialState) {
@@ -72,12 +68,7 @@ class TodoHomePage extends StatelessWidget {
             }
           },
         ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_circle),
-          onPressed: () {
-            Navigator.pushNamed(context, RouteNames.AddTodoPage);
-          },
-        ),
+        floatingActionButton: cusFloatingActionButton(context),
       ),
     );
   }

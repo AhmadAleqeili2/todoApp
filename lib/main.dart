@@ -1,3 +1,4 @@
+import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/core/enums/app_theme_mode.dart';
 import 'package:APP2323/core/presentation/loading_page.dart';
 import 'package:APP2323/config/theme/dark_theme_data.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
           );
         } else if (settingState is SettingLoadSuccessState) {
           return MaterialApp(
-            title: 'My Todo App',
+            title: AppStrings.title,
             theme: lightThemeData,
             themeMode: settingState.setting.appThemeMode == AppThemeMode.dark
                 ? ThemeMode.dark

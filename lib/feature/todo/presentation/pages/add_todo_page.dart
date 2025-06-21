@@ -1,6 +1,7 @@
-import 'package:APP2323/core/constants/app_strings.dart';
 import 'package:APP2323/core/presentation/some_went_wrong_page.dart';
 import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
+import 'package:APP2323/feature/todo/presentation/widgets/add_todo/build_body.dart';
+import 'package:APP2323/feature/todo/presentation/widgets/add_todo/icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,34 +22,19 @@ class AddTodoPageState extends State<AddTodoPage> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            icon: Icon(Icons.check),
-            onPressed: () {
-              if (_formKey.currentState?.validate() == true && _task != null) {
-                _formKey.currentState?.save();
-                BlocProvider.of<TodoFormBloc>(context).add(
-                  TodoFormAddEvent(
-                    task: _task!,
-                  ),
-                );
-                WidgetsBinding.instance.addPostFrameCallback((_) {
-              Navigator.of(context).pop();
-            });
-              }
-            },
-          )
+          iconButton(context, _formKey, _task)
         ],
       ),
       body: BlocBuilder<TodoFormBloc, TodoFormState>(
         builder: (BuildContext context, TodoFormState todoFormState) {
           if (todoFormState is TodoFormInitialState) {
-            return _buildBody(context);
+            return buildBody(context, _formKey, _task);
           } else if (todoFormState is TodoFormLoadingState) {
             return Center(child: CircularProgressIndicator());
           } else if (todoFormState is TodoFormAddSuccessState) {
-            return _buildBody(context);
+            return buildBody(context, _formKey, _task);
           } else if (todoFormState is TodoFormAddFailState) {
-            return _buildBody(context);
+            return buildBody(context, _formKey, _task);
           }
           return SomeThingWentWrongPage();
         },
@@ -56,41 +42,5 @@ class AddTodoPageState extends State<AddTodoPage> {
     );
   }
 
-  Widget _buildBody(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(16),
-      child: Form(
-        key: _formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Expanded(
-              child: TextFormField(
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  enabledBorder: InputBorder.none,
-                  errorBorder: InputBorder.none,
-                  disabledBorder: InputBorder.none,
-                ),
-                scrollPadding: EdgeInsets.all(20.0),
-                keyboardType: TextInputType.multiline,
-                maxLines: 99999,
-                autofocus: true,
-                validator: (value) {
-                  if (value?.isEmpty == true) {
-                    return AppStrings.taskRequired;
-                  }
-                  return null;
-                },
-                onChanged: (value) {
-                  _task = value;
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+
 }
