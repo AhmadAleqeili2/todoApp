@@ -11,4 +11,10 @@ class AppStrings {
 
   static String appDarkMode = "Dark Mode";
 
+  static String addTask = 'Add Task';
+
+  static String cancel =  'Cancel';
+
+  static String save  = 'Save';
+
 }

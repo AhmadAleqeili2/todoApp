@@ -15,8 +15,13 @@ static final Color primaryColor = const Color.fromARGB(255, 5, 5, 5);
 static final Color appBarColor = const Color.fromARGB(28, 245, 245, 245);
 static final Color appBarIconColor = const Color.fromARGB(221, 255, 255, 255);
 static final Color foreGroundColor = const Color.fromARGB(255, 0, 0, 0);
+static final Color floatingActionButtonFG = const Color.fromARGB(255, 255, 255, 255);
 static final Color scaffoldBackgroundColor = const Color.fromARGB(28, 255, 255, 255);
 static final Color textColor = const Color.fromARGB(255, 255, 255, 255);
+
+  static Color secondaryColor = const Color.fromARGB(255, 59, 57, 57);
+
+  static Color surfaceColor  = const Color.fromARGB(255, 59, 57, 57);
 
 
 }

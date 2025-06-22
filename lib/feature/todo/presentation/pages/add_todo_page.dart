@@ -17,26 +17,26 @@ class AddTodoPage extends StatefulWidget {
 
 class AddTodoPageState extends State<AddTodoPage> {
   final _formKey = GlobalKey<FormState>();
-  String? _task;
+  TextEditingController task =  TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          iconButton(context, _formKey, _task)
+          iconButton(context, _formKey, task)
         ],
       ),
       body: BlocBuilder<TodoFormBloc, TodoFormState>(
         builder: (BuildContext context, TodoFormState todoFormState) {
           if (todoFormState is TodoFormInitialState) {
-            return buildBody(context, _formKey, _task);
+            return buildBody(context, _formKey, task);
           } else if (todoFormState is TodoFormLoadingState) {
             return Center(child: CircularProgressIndicator());
           } else if (todoFormState is TodoFormAddSuccessState) {
-            return buildBody(context, _formKey, _task);
+            return buildBody(context, _formKey, task);
           } else if (todoFormState is TodoFormAddFailState) {
-            return buildBody(context, _formKey, _task);
+            return buildBody(context, _formKey, task);
           }
           return SomeThingWentWrongPage();
         },

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 PreferredSizeWidget appBar(BuildContext context) {
   return AppBar(
+    
           actions: [
             IconButton(
                 icon: Icon(Icons.settings),
