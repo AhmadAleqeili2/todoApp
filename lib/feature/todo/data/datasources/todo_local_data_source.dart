@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
-import 'package:APP2323/core/error/exceptions.dart';
-import 'package:APP2323/feature/todo/data/models/todo_model.dart';
-import 'package:APP2323/feature/todo/domain/entities/todo.dart';
+import 'package:app2323/core/error/exceptions.dart';
+import 'package:app2323/feature/todo/data/models/todo_model.dart';
+import 'package:app2323/feature/todo/domain/entities/todo.dart';
 
 abstract class TodoLocalDataSource {
   Future<TodoModel> getTodo(int id);

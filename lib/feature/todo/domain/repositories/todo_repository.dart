@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:APP2323/core/error/failures.dart';
-import 'package:APP2323/feature/todo/domain/entities/todo.dart';
+import 'package:app2323/core/error/failures.dart';
+import 'package:app2323/feature/todo/domain/entities/todo.dart';
 
 abstract class TodoRepository {
   Future<Either<Failure, Todo>> getTodo(int id);

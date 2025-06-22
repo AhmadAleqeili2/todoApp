@@ -1,6 +1,6 @@
 class AppStrings {
   static const String title = 'My Todo App';
-  static const String InitialState = 'Initial State';
+  static const String initialState = 'Initial State';
   static String errorLoading = "Error Loading";
 
   static String unExpectedState = "Unexpected State";

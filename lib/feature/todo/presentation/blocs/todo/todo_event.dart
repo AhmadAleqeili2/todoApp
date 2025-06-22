@@ -13,7 +13,7 @@ class GetTodoListEvent extends TodoEvent {}
 class DeleteTodoEvent extends TodoEvent {
   final int id;
 
-  DeleteTodoEvent(this.id);
+  const DeleteTodoEvent(this.id);
 
   @override
   List<Object> get props => [id];

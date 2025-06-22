@@ -1,19 +1,19 @@
-import 'package:APP2323/feature/setting/domain/usecases/change_app_theme_mode.dart';
-import 'package:APP2323/feature/todo/data/datasources/todo_local_data_source.dart';
-import 'package:APP2323/feature/todo/data/respositories/todo_repository_impl.dart';
-import 'package:APP2323/feature/todo/domain/repositories/todo_repository.dart';
-import 'package:APP2323/feature/todo/domain/usecases/add_todo.dart';
-import 'package:APP2323/feature/todo/domain/usecases/get_all_todo.dart';
-import 'package:APP2323/feature/todo/domain/usecases/get_todo.dart';
-import 'package:APP2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
-import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
+import 'package:app2323/feature/setting/domain/usecases/change_app_theme_mode.dart';
+import 'package:app2323/feature/todo/data/datasources/todo_local_data_source.dart';
+import 'package:app2323/feature/todo/data/respositories/todo_repository_impl.dart';
+import 'package:app2323/feature/todo/domain/repositories/todo_repository.dart';
+import 'package:app2323/feature/todo/domain/usecases/add_todo.dart';
+import 'package:app2323/feature/todo/domain/usecases/get_all_todo.dart';
+import 'package:app2323/feature/todo/domain/usecases/get_todo.dart';
+import 'package:app2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
+import 'package:app2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
 import 'package:get_it/get_it.dart';
 
-import 'feature/setting/data/datasources/setting_local_data_source.dart';
-import 'feature/setting/data/respositories/setting_repository_impl.dart';
-import 'feature/setting/domain/repositories/setting_repository.dart';
-import 'feature/setting/domain/usecases/get_setting.dart';
-import 'feature/setting/presentation/blocs/setting/setting_bloc.dart';
+import '../../feature/setting/data/datasources/setting_local_data_source.dart';
+import '../../feature/setting/data/respositories/setting_repository_impl.dart';
+import '../../feature/setting/domain/repositories/setting_repository.dart';
+import '../../feature/setting/domain/usecases/get_setting.dart';
+import '../../feature/setting/presentation/blocs/setting/setting_bloc.dart';
 
 final sl = GetIt.instance;
 

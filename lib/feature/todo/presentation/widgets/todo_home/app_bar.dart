@@ -1,4 +1,4 @@
-import 'package:APP2323/core/constants/routes_name.dart';
+import 'package:app2323/core/constants/routes_name.dart';
 import 'package:flutter/material.dart';
 
 PreferredSizeWidget appBar(BuildContext context) {
@@ -7,7 +7,7 @@ PreferredSizeWidget appBar(BuildContext context) {
             IconButton(
                 icon: Icon(Icons.settings),
                 onPressed: () {
-                  Navigator.pushNamed(context, RouteNames.SettingPage);
+                  Navigator.pushNamed(context, RouteNames.settingPage);
                 }),
           ],
         );

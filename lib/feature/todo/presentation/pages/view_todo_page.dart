@@ -1,5 +1,5 @@
-import 'package:APP2323/core/constants/app_strings.dart';
-import 'package:APP2323/feature/todo/data/models/todo_model.dart';
+import 'package:app2323/core/constants/app_strings.dart';
+import 'package:app2323/feature/todo/data/models/todo_model.dart';
 import 'package:flutter/material.dart';
 
 class ViewTodoPage extends StatelessWidget {

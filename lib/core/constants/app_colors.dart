@@ -11,7 +11,7 @@ static final Color scaffoldBackgroundColor = Colors.grey[200]!;
 }
 class DarkThemeAppColors {
 static final MaterialColor primarySwatch = Colors.yellow;
-static final Color primaryColor = const Color.fromARGB(255, 240, 216, 155);
+static final Color primaryColor = const Color.fromARGB(255, 5, 5, 5);
 static final Color appBarColor = const Color.fromARGB(28, 245, 245, 245);
 static final Color appBarIconColor = const Color.fromARGB(221, 255, 255, 255);
 static final Color foreGroundColor = const Color.fromARGB(255, 0, 0, 0);

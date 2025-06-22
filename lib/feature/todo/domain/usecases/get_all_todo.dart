@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:APP2323/core/error/failures.dart';
-import 'package:APP2323/core/usecases/usecase.dart';
-import 'package:APP2323/feature/todo/domain/entities/todo.dart';
-import 'package:APP2323/feature/todo/domain/repositories/todo_repository.dart';
+import 'package:app2323/core/error/failures.dart';
+import 'package:app2323/core/usecases/usecase.dart';
+import 'package:app2323/feature/todo/domain/entities/todo.dart';
+import 'package:app2323/feature/todo/domain/repositories/todo_repository.dart';
 
 
 class GetAllTodo implements UseCase<List<Todo>, NoParams> {

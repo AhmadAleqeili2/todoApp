@@ -14,7 +14,7 @@ class SettingLoadingState extends SettingState {}
 class SettingLoadSuccessState extends SettingState {
   final Setting setting;
 
-  SettingLoadSuccessState({required this.setting});
+  const SettingLoadSuccessState({required this.setting});
 
   @override
   List<Object> get props => [];

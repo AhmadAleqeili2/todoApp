@@ -1,15 +1,17 @@
-import 'package:APP2323/core/constants/app_strings.dart';
-import 'package:APP2323/core/constants/routes_name.dart';
-import 'package:APP2323/feature/todo/data/models/todo_model.dart';
-import 'package:APP2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
-import 'package:APP2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
-import 'package:APP2323/feature/todo/presentation/widgets/todo_home/todo_card.dart';
-import 'package:APP2323/feature/todo/presentation/widgets/todo_home/app_bar.dart';
-import 'package:APP2323/feature/todo/presentation/widgets/todo_home/floating_action_buttin.dart';
+import 'package:app2323/core/constants/app_strings.dart';
+import 'package:app2323/core/constants/routes_name.dart';
+import 'package:app2323/feature/todo/data/models/todo_model.dart';
+import 'package:app2323/feature/todo/presentation/blocs/todo/todo_bloc.dart';
+import 'package:app2323/feature/todo/presentation/blocs/todo_form/todo_form_bloc.dart';
+import 'package:app2323/feature/todo/presentation/widgets/todo_home/todo_card.dart';
+import 'package:app2323/feature/todo/presentation/widgets/todo_home/app_bar.dart';
+import 'package:app2323/feature/todo/presentation/widgets/todo_home/floating_action_buttin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class TodoHomePage extends StatelessWidget {
+  const TodoHomePage({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class TodoHomePage extends StatelessWidget {
           builder: (BuildContext context, TodoState state) {
             if (state is TodoInitialState) {
               return Center(
-                child: Text(AppStrings.InitialState),
+                child: Text(AppStrings.initialState),
               );
             } else if (state is TodoLoadingState) {
               return Center(
@@ -43,7 +45,7 @@ class TodoHomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(
                           context,
-                          RouteNames.ViewTodoPage,
+                          RouteNames.viewTodoPage,
                           arguments: state.todoList[index] as TodoModel
                         );
                       },

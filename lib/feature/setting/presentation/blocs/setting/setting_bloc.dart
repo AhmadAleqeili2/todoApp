@@ -1,10 +1,10 @@
 
-import 'package:APP2323/core/enums/app_theme_mode.dart';
+import 'package:app2323/core/enums/app_theme_mode.dart';
 import 'package:bloc/bloc.dart';
-import 'package:APP2323/core/usecases/usecase.dart';
-import 'package:APP2323/feature/setting/domain/entities/setting.dart';
-import 'package:APP2323/feature/setting/domain/usecases/change_app_theme_mode.dart';
-import 'package:APP2323/feature/setting/domain/usecases/get_setting.dart';
+import 'package:app2323/core/usecases/usecase.dart';
+import 'package:app2323/feature/setting/domain/entities/setting.dart';
+import 'package:app2323/feature/setting/domain/usecases/change_app_theme_mode.dart';
+import 'package:app2323/feature/setting/domain/usecases/get_setting.dart';
 import 'package:equatable/equatable.dart';
 
 part 'setting_event.dart';
@@ -19,11 +19,9 @@ class SettingBloc extends Bloc<SettingEvent, SettingState> {
       final getSettingFailedOrSuccess = await getSetting(NoParams());
       getSettingFailedOrSuccess.fold(
         (l) {
-          print("SettingLoadFailState : $l");
           emit(SettingLoadFailState());
         },
         (r) {
-          print("SettingLoadSuccessState : $r");
           emit(SettingLoadSuccessState(setting: r));
         },
       );

@@ -1,8 +1,8 @@
-import 'package:APP2323/core/enums/app_theme_mode.dart';
+import 'package:app2323/core/enums/app_theme_mode.dart';
 import 'package:dartz/dartz.dart';
-import 'package:APP2323/core/error/failures.dart';
-import 'package:APP2323/core/usecases/usecase.dart';
-import 'package:APP2323/feature/setting/domain/repositories/setting_repository.dart';
+import 'package:app2323/core/error/failures.dart';
+import 'package:app2323/core/usecases/usecase.dart';
+import 'package:app2323/feature/setting/domain/repositories/setting_repository.dart';
 import 'package:equatable/equatable.dart';
 
 class ChangeAppThemeMode implements UseCase<void, Params> {
@@ -19,7 +19,7 @@ class ChangeAppThemeMode implements UseCase<void, Params> {
 class Params extends Equatable {
   final AppThemeMode appThemeMode;
 
-  Params({required this.appThemeMode});
+  const Params({required this.appThemeMode});
 
   @override
   List<Object> get props => [appThemeMode];

@@ -1,7 +1,7 @@
 
-import 'package:APP2323/core/enums/app_theme_mode.dart';
-import 'package:APP2323/feature/setting/data/models/setting_model.dart';
-import 'package:APP2323/feature/setting/domain/entities/setting.dart';
+import 'package:app2323/core/enums/app_theme_mode.dart';
+import 'package:app2323/feature/setting/data/models/setting_model.dart';
+import 'package:app2323/feature/setting/domain/entities/setting.dart';
 
 abstract class SettingLocalDataSource {
   Future<Setting> getSetting();

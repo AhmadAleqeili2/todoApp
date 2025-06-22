@@ -1,9 +1,8 @@
-import 'package:APP2323/core/enums/app_theme_mode.dart';
-import 'package:APP2323/feature/setting/domain/entities/setting.dart';
+import 'package:app2323/core/enums/app_theme_mode.dart';
+import 'package:app2323/feature/setting/domain/entities/setting.dart';
 
 class SettingModel extends Setting {
-  final AppThemeMode appThemeMode;
-  SettingModel({required this.appThemeMode})
+  const SettingModel({required AppThemeMode appThemeMode})
       : super(appThemeMode: appThemeMode);
 
   SettingModel copyWith({AppThemeMode? appThemeMode}) {

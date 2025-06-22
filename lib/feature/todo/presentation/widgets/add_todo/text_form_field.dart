@@ -1,7 +1,7 @@
-import 'package:APP2323/core/constants/app_strings.dart';
+import 'package:app2323/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
 
-Widget textFormField (_task){
+Widget textFormField (String task){
   return TextFormField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
@@ -21,7 +21,7 @@ Widget textFormField (_task){
                   return null;
                 },
                 onChanged: (value) {
-                  _task = value;
+                  task = value;
                 },
               );
 }

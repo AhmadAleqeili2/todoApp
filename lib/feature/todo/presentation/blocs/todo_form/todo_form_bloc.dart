@@ -1,6 +1,6 @@
 
 import 'package:bloc/bloc.dart';
-import 'package:APP2323/feature/todo/domain/usecases/add_todo.dart';
+import 'package:app2323/feature/todo/domain/usecases/add_todo.dart';
 import 'package:equatable/equatable.dart';
 
 part 'todo_form_event.dart';
@@ -23,7 +23,6 @@ class TodoFormBloc extends Bloc<TodoFormEvent, TodoFormState> {
 
   @override
   void onTransition(Transition<TodoFormEvent, TodoFormState> transition) {
-    print("TodoFormBloc : $transition");
     super.onTransition(transition);
   }
 }

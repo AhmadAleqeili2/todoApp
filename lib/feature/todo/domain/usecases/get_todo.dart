@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:APP2323/core/error/failures.dart';
-import 'package:APP2323/core/usecases/usecase.dart';
-import 'package:APP2323/feature/todo/domain/entities/todo.dart';
-import 'package:APP2323/feature/todo/domain/repositories/todo_repository.dart';
+import 'package:app2323/core/error/failures.dart';
+import 'package:app2323/core/usecases/usecase.dart';
+import 'package:app2323/feature/todo/domain/entities/todo.dart';
+import 'package:app2323/feature/todo/domain/repositories/todo_repository.dart';
 import 'package:equatable/equatable.dart';
 
 class GetTodo implements UseCase<Todo, Params> {
@@ -19,7 +19,7 @@ class GetTodo implements UseCase<Todo, Params> {
 class Params extends Equatable {
   final int id;
 
-  Params({required this.id});
+  const Params({required this.id});
 
   @override
   List<Object> get props => [id];

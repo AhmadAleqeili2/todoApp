@@ -14,7 +14,7 @@ class TodoLoadingState extends TodoState {}
 class TodoLoadSuccessState extends TodoState {
   final List<Todo> todoList;
 
-  TodoLoadSuccessState({required this.todoList});
+  const TodoLoadSuccessState({required this.todoList});
 
   @override
   List<Object> get props => [];

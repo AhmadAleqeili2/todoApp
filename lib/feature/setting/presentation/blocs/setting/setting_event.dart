@@ -12,5 +12,5 @@ class LoadSettingEvent extends SettingEvent {}
 class ChangeAppThemeModeEvent extends SettingEvent {
   final AppThemeMode appThemeMode;
 
-  ChangeAppThemeModeEvent({required this.appThemeMode});
+  const ChangeAppThemeModeEvent({required this.appThemeMode});
 }
